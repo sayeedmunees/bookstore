@@ -1,1 +1,1 @@
-export const serverURL = "https://bookstore-backend-v7jq.onrender.com/";
+export const serverURL = "https://bookstore-backend-v7jq.onrender.com";
