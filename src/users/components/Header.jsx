@@ -33,11 +33,13 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const token = sessionStorage.getItem("token");
-    setToken(token);
-    const user = JSON.parse(sessionStorage.getItem("existingUser"));
+    if (sessionStorage.getItem("token")) {
+      const token = sessionStorage.getItem("token");
+      setToken(token);
+      const user = JSON.parse(sessionStorage.getItem("existingUser"));
 
-    setProfile(user.profile);
+      setProfile(user.profile);
+    }
   }, [userProfileUpdateStatus]);
 
   return (
